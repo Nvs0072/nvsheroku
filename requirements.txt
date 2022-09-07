@@ -1,0 +1,5 @@
+Pyrogram
+TgCrypto
+pytz
+heroku3
+pyromod

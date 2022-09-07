@@ -1,0 +1,35 @@
+{
+  "name": "DL-Stream-V3",
+  "description": "Telegram Bot stream video downloader.",
+  "keywords": [
+    "telegram",
+    "downloader",
+    "ffmpeg",
+    "uploader"
+  ],
+  "success_url": "https://t.me/rxyzdev_tmp",
+  "website": "https://github.com/maderio/DL-Stream-Helper",
+  "repository": "https://github.com/maderio/DL-Stream-Helper",
+  "stack": "heroku-20",
+  "env": {
+    "WEBHOOK": {
+      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
+      "value": "ANYTHING"
+    }
+  },
+  "addons": [
+  ],
+  "buildpacks": [{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  }, {
+    "url": "https://github.com/verbit-ai/rtmpdump-buildpack.git"
+  }, {
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
